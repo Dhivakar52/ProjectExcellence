@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ArrowLeft, Zap, Timer, Star, Database, ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';

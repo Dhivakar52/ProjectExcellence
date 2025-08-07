@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Search, Bell, ChevronDown, Hand, X, Ticket } from 'lucide-react';
 import { Input } from './ui/input';
 import { Avatar, AvatarFallback } from './ui/avatar';

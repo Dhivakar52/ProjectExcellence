@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { ArrowLeft, Plus, Building, Globe, MapPin, Briefcase, Palette } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';

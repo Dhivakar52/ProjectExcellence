@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowLeft, Tag, Clock, GitBranch, RefreshCw, AlertTriangle, ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
