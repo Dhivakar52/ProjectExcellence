@@ -6,7 +6,9 @@ import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Textarea } from './ui/textarea';
-import { Eye, UserCheck, Clock, CheckCircle, TrendingUp, Upload, Filter, ArrowLeft, History, ChevronDown, Search, Columns3 } from 'lucide-react';
+import { Eye, UserCheck, Clock, CheckCircle, TrendingUp, Upload, Filter, ArrowLeft, History, ChevronDown, 
+  // Search,
+   Columns3 } from 'lucide-react';
 import { EnhancedTable } from './EnhancedTable';
 import { SlidingPopup } from './SlidingPopup';
 import { AdvancedFilter } from './AdvancedFilter';
@@ -490,7 +492,9 @@ export function TicketManagement() {
     { 
       key: 'action', 
       label: 'Action',
-      render: (value: any, row: any) => (
+      render: (
+        // value: any, 
+        row: any) => (
         <Button 
           variant="ghost" 
           size="sm" 
@@ -504,7 +508,9 @@ export function TicketManagement() {
     { 
       key: 'response', 
       label: 'Response',
-      render: (value: any, row: any) => (
+      render: (
+        // value: any,
+         row: any) => (
         <Button 
           variant="ghost" 
           size="sm" 
@@ -518,7 +524,9 @@ export function TicketManagement() {
     { 
       key: 'history', 
       label: 'History',
-      render: (value: any, row: any) => (
+      render: (
+        // value: any, 
+        row: any) => (
         <Button 
           variant="ghost" 
           size="sm" 

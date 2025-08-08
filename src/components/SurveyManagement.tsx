@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table';
 import { Badge } from './ui/badge';
@@ -7,12 +7,20 @@ import { Input } from './ui/input';
 import { Eye, SlidersHorizontal, ArrowLeft } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 
+
+// type User = {
+//   name: string;
+//   email: string;
+//   role: string;
+//   status: string;
+// };
+
 export function SurveyManagement() {
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
   const [showPreview, setShowPreview] = useState(false);
-  const [selectedSurvey, setSelectedSurvey] = useState(null);
-  const [selectedNPS, setSelectedNPS] = useState(null);
+  const [_selectedSurvey, setSelectedSurvey] = useState(null);
+ const [selectedNPS, setSelectedNPS] = useState<number | null>(null);
 
   const allSurveys = [
     { id: 1, name: 'SRM Smiles', tenant: 'SRMAP', url: 'http://srmap/survey.com', status: 'Active', feedbackSource: 'JUNO' },

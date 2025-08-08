@@ -25,11 +25,12 @@ import { NotificationSettingsConfig } from './components/NotificationSettingsCon
 import { TicketConfigurationSettings } from './components/TicketConfigurationSettings';
 import { Sidebar } from './components/Sidebar';
 import { Header } from './components/Header';
+import '../src/styles/globals.css';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('login');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [user, setUser] = useState({ name: 'Michael', role: 'Admin' });
+  const [user, _setUser] = useState({ name: 'Michael', role: 'Admin' });
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   const handleLogin = () => {

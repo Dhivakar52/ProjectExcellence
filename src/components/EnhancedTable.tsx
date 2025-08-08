@@ -24,7 +24,7 @@ export function EnhancedTable({
   columns, 
   data, 
   searchPlaceholder = "Search...",
-  onRowAction,
+  // onRowAction,
   hideSearch = false
 }: EnhancedTableProps) {
   const [searchTerm, setSearchTerm] = useState('');

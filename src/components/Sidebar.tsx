@@ -1,12 +1,12 @@
 
 import { 
   LayoutDashboard, 
-  FileText, 
+  // FileText, 
   MessageSquare, 
   Ticket, 
   Bell, 
-  TrendingUp, 
-  Users, 
+  // TrendingUp, 
+  // Users, 
   Settings, 
   LogOut,
   ChevronLeft,

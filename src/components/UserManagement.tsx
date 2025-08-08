@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table';
 import { Badge } from './ui/badge';
@@ -11,11 +11,18 @@ import { Label } from './ui/label';
 import { Checkbox } from './ui/checkbox';
 import { RadioGroup, RadioGroupItem } from './ui/radio-group';
 
+interface User {
+  name: string;
+  email: string;
+  role: string;
+  status: string;
+}
+
 export function UserManagement() {
   const [showAddUser, setShowAddUser] = useState(false);
   const [showEditUser, setShowEditUser] = useState(false);
   const [activeTab, setActiveTab] = useState('users');
-  const [selectedUser, setSelectedUser] = useState(null);
+  const [selectedUser, setSelectedUser] = useState<User | null>(null);
 
   const users = [
     { id: 1, name: 'Ravi Sharma', email: 'ravi@org.com', role: 'Employee', status: 'Active' },

@@ -95,7 +95,7 @@ export function Header({ user, currentPage }: HeaderProps) {
                   <ChevronDown className="w-4 h-4 text-gray-400" />
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-64">
+              <DropdownMenuContent align="end" className="w-64 bg-white" >
                 <div className="px-3 py-2 border-b border-gray-100">
                   <p className="text-sm text-gray-500">michael@gmail.com</p>
                   <p className="text-xs text-gray-400">Group Admin</p>

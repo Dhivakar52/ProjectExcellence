@@ -183,6 +183,11 @@
     }
   }
 }
+@layer components {
+  [role="dialog"] {
+    background-color: white !important;
+  }
+}
 
 html {
   font-size: var(--font-size);

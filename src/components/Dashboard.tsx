@@ -3,18 +3,30 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
-import { Input } from './ui/input';
+// import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Checkbox } from './ui/checkbox';
 import { Calendar as CalendarComponent } from './ui/calendar';
-import { Ticket, Clock, AlertTriangle, TrendingUp, AlertCircle, SlidersHorizontal, Calendar, Search, ChevronDown, Filter } from 'lucide-react';
+import { Ticket, Clock, AlertTriangle, TrendingUp, AlertCircle, 
+  // SlidersHorizontal, 
+  Calendar, Search, ChevronDown, Filter } from 'lucide-react';
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
 import { AdvancedFilter } from './AdvancedFilter';
 
+type Ticket = {
+  id: number;
+  ticketId: string;
+  category: string;
+  status: string;
+  priority: string;
+  assignedTo: string;
+};
+
+
 export function Dashboard() {
   const [statusFilter, setStatusFilter] = useState('all');
-  const [filteredTickets, setFilteredTickets] = useState([]);
+ const [filteredTickets, setFilteredTickets] = useState<Ticket[]>([]);
   const [dateRange, setDateRange] = useState('07/01/2025 - 07/22/2025');
   const [selectedTenant, setSelectedTenant] = useState('');
   const [selectedSurveys, setSelectedSurveys] = useState<string[]>(['SRM Smiles', 'Discharge Experience', 'Food Service', 'Cleanliness', 'Patient Satisfaction']);
@@ -107,16 +119,16 @@ export function Dashboard() {
     updateDateRange(firstDayLastMonth, lastDayLastMonth);
   };
 
-  const handleFilter = () => {
-    if (statusFilter === 'all') {
-      setFilteredTickets(allTickets);
-    } else {
-      const filtered = allTickets.filter(ticket => 
-        ticket.status.toLowerCase().replace(' ', '-') === statusFilter
-      );
-      setFilteredTickets(filtered);
-    }
-  };
+  // const handleFilter = () => {
+  //   if (statusFilter === 'all') {
+  //     setFilteredTickets(allTickets);
+  //   } else {
+  //     const filtered = allTickets.filter(ticket => 
+  //       ticket.status.toLowerCase().replace(' ', '-') === statusFilter
+  //     );
+  //     setFilteredTickets(filtered);
+  //   }
+  // };
 
   const availableSurveys = [
     'SRM Smiles',

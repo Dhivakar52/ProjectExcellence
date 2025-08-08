@@ -5,7 +5,9 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Checkbox } from './ui/checkbox';
-import { Eye, Plus, ChevronDown, Filter, Columns3 } from 'lucide-react';
+import { Eye,
+  //  Plus,
+    ChevronDown, Filter, Columns3 } from 'lucide-react';
 import { EnhancedTable } from './EnhancedTable';
 import { SlidingPopup } from './SlidingPopup';
 import { AdvancedFilter } from './AdvancedFilter';
@@ -223,7 +225,9 @@ export function SurveyResponse() {
     { 
       key: 'response', 
       label: 'Response',
-      render: (value: any, row: any) => (
+      render: (
+        // value: any,
+         row: any) => (
         <Button 
           variant="ghost" 
           size="sm" 

@@ -3,7 +3,9 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table';
 import { Button } from './ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
-import { Eye, Edit, Trash2, Settings, Save } from 'lucide-react';
+import { Eye, Edit, Trash2, Settings, 
+  // Save
+ } from 'lucide-react';
 import { Checkbox } from './ui/checkbox';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
@@ -49,7 +51,9 @@ export function Escalation() {
     { 
       key: 'action', 
       label: 'Action',
-      render: (value: any, row: any) => (
+      render: (
+        // value: any ,
+         row: any) => (
         <div className="flex space-x-2">
           <Button 
             variant="ghost" 

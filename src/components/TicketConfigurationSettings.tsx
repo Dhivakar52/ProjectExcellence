@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { ArrowLeft, Save, Settings, Clock, Users, Star, MessageCircle } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -13,8 +13,19 @@ interface TicketConfigurationSettingsProps {
   onNavigate: (page: string) => void;
 }
 
+type Config = {
+  selfTimelineExtension: number;
+  ticketReassignmentSettings: number;
+  escalationTimeLimits: {
+    level1: number;
+    level2: number;
+  };
+  enableCustomComments: boolean;
+  commentField: string;
+};
+
 export function TicketConfigurationSettings({ onNavigate }: TicketConfigurationSettingsProps) {
-  const [config, setConfig] = useState({
+  const [config, setConfig] = useState<Config>({
     selfTimelineExtension: 4,
     ticketReassignmentSettings: 2,
     escalationTimeLimits: {
@@ -31,13 +42,13 @@ export function TicketConfigurationSettings({ onNavigate }: TicketConfigurationS
     { range: '9-10', action: 'No Action', editable: true }
   ]);
 
-  const handleConfigChange = (field: string, value: any) => {
+ const handleConfigChange = (field: string, value: any) => {
     if (field.includes('.')) {
       const [parent, child] = field.split('.');
       setConfig(prev => ({
         ...prev,
         [parent]: {
-          ...prev[parent as keyof typeof prev],
+          ...(prev[parent as keyof Config] as Record<string, any> || {}),
           [child]: value
         }
       }));

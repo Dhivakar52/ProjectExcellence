@@ -205,7 +205,9 @@ export function Notifications() {
     { 
       key: 'action', 
       label: 'Action',
-      render: (value: any, row: any) => (
+      render: (
+        // value: any,
+         row: any) => (
         <Button 
           variant="ghost" 
           size="sm" 
