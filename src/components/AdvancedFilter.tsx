@@ -10,7 +10,8 @@ import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
 import { CalendarIcon, Filter, RotateCcw, Search } from 'lucide-react';
 import { Badge } from './ui/badge';
 
-import { MultiSelect  } from "react-multi-select-component";
+import ReactSelect from "react-select";
+
 
 
 
@@ -141,14 +142,20 @@ export function AdvancedFilter({
           </Select>
         );
 
-     case 'multiselect':
+case 'multiselect':
   return (
-    <MultiSelect
+    <ReactSelect
+      isMulti
       className="my-3"
       options={field.options?.map(opt => ({ label: opt, value: opt })) || []}
       value={(filters[field.key] || []).map((opt: string) => ({ label: opt, value: opt }))}
-      onChange={(selected: any) => handleFilterChange(field.key, selected.map((s: any) => s.value))}
-      labelledBy={`Select ${field.label.toLowerCase()}`}
+      onChange={(selected: any) =>
+        handleFilterChange(
+          field.key,
+          (selected || []).map((s: any) => s.value)
+        )
+      }
+      placeholder={`Select ${field.label.toLowerCase()}`}
     />
   );
 
