@@ -4,7 +4,7 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
-import { Checkbox } from './ui/checkbox';
+// import { Checkbox } from './ui/checkbox';
 import { Calendar } from './ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
 import { CalendarIcon, Filter, RotateCcw, Search } from 'lucide-react';
@@ -52,22 +52,22 @@ export function AdvancedFilter({
     }));
   };
 
-  const handleMultiSelectChange = (key: string, option: string, checked: boolean) => {
-    setFilters(prev => {
-      const currentValues = prev[key] || [];
-      if (checked) {
-        return {
-          ...prev,
-          [key]: [...currentValues, option]
-        };
-      } else {
-        return {
-          ...prev,
-          [key]: currentValues.filter((v: string) => v !== option)
-        };
-      }
-    });
-  };
+  // const handleMultiSelectChange = (key: string, option: string, checked: boolean) => {
+  //   setFilters(prev => {
+  //     const currentValues = prev[key] || [];
+  //     if (checked) {
+  //       return {
+  //         ...prev,
+  //         [key]: [...currentValues, option]
+  //       };
+  //     } else {
+  //       return {
+  //         ...prev,
+  //         [key]: currentValues.filter((v: string) => v !== option)
+  //       };
+  //     }
+  //   });
+  // };
 
   const handleApplyFilter = () => {
     const processedFilters = { ...filters };
@@ -141,12 +141,13 @@ export function AdvancedFilter({
           </Select>
         );
 
-      case 'multiselect':
+     case 'multiselect':
   return (
-    <MultiSelect className='my-3'
+    <MultiSelect
+      className="my-3"
       options={field.options?.map(opt => ({ label: opt, value: opt })) || []}
       value={(filters[field.key] || []).map((opt: string) => ({ label: opt, value: opt }))}
-      onChange={(selected : any) => handleFilterChange(field.key, selected.map((s: any) => s.value))}
+      onChange={(selected: any) => handleFilterChange(field.key, selected.map((s: any) => s.value))}
       labelledBy={`Select ${field.label.toLowerCase()}`}
     />
   );
