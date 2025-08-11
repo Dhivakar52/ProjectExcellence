@@ -39,7 +39,7 @@ export function SlidingPopup({
                 onClick={actionButton.onClick}
                 variant={actionButton.variant || 'default'}
                 size="sm"
-                style={actionButton.variant === 'default' ? { backgroundColor: '#2563EB' } : {}}
+                style={actionButton.variant === 'default' ? { backgroundColor: '#2563EB' } : {backgroundColor: '#000000' , color: '#FFFFFF'}}
               >
                 {actionButton.label}
               </Button>
