@@ -186,10 +186,12 @@
 @layer components {
   [role="dialog"] {
     background-color: white !important;
+
   }
   [role="option"] {
     background-color: white !important;
   }
+ 
 }
 
 html {

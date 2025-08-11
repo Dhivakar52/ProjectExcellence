@@ -206,13 +206,13 @@ export function Notifications() {
       key: 'action', 
       label: 'Action',
       render: (
-        // value: any,
+        value: any,
          row: any) => (
         <Button 
           variant="ghost" 
           size="sm" 
           className="p-2 hover:bg-blue-50"
-          onClick={() => handleViewNotification(row)}
+          onClick={() => handleViewNotification(row || value)}
         >
           <Eye className="w-4 h-4 text-blue-600" />
         </Button>

@@ -67,7 +67,7 @@ export function EscalationMatrix({ onNavigate }: EscalationMatrixProps) {
               </TableRow>
             </TableBody>
           </Table>
-          <Button className="bg-[#2563EB] hover:bg-[#0C265E]">Save Matrix</Button>
+          <Button className="bg-[#2563EB] text-white hover:bg-[#0C265E]">Save Matrix</Button>
         </CardContent>
       </Card>
     </div>

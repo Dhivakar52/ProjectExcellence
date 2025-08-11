@@ -493,13 +493,13 @@ export function TicketManagement() {
       key: 'action', 
       label: 'Action',
       render: (
-        // value: any, 
+        value: any, 
         row: any) => (
         <Button 
           variant="ghost" 
           size="sm" 
           className="p-2 hover:bg-blue-50"
-          onClick={() => handleViewTicket(row)}
+          onClick={() => handleViewTicket(row || value)}
         >
           <Eye className="w-4 h-4 text-blue-600" />
         </Button>
@@ -509,13 +509,13 @@ export function TicketManagement() {
       key: 'response', 
       label: 'Response',
       render: (
-        // value: any,
+        value: any,
          row: any) => (
         <Button 
           variant="ghost" 
           size="sm" 
           className="p-2 hover:bg-blue-50"
-          onClick={() => handleViewResponse(row)}
+          onClick={() => handleViewResponse(row || value)}
         >
           <Eye className="w-4 h-4 text-green-600" />
         </Button>
@@ -525,13 +525,13 @@ export function TicketManagement() {
       key: 'history', 
       label: 'History',
       render: (
-        // value: any, 
+        value: any, 
         row: any) => (
         <Button 
           variant="ghost" 
           size="sm" 
           className="p-2 hover:bg-blue-50"
-          onClick={() => handleViewHistory(row)}
+          onClick={() => handleViewHistory(row || value)}
         >
           <History className="w-4 h-4 text-blue-600" />
         </Button>

@@ -1,2 +1,7 @@
 @import "tailwindcss";
 
+
+
+.rdp-weekdays{
+    @apply  text-black font-semibold uppercase flex justify-between;
+}

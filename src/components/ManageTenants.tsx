@@ -101,7 +101,7 @@ export function ManageTenants({ onNavigate }: ManageTenantsProps) {
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex justify-between items-center">
-            <Button className="bg-[#2563EB] hover:bg-[#0C265E]" onClick={() => setDrawerOpen('addTenant')}>
+            <Button className="bg-[#2563EB] hover:bg-[#0C265E] text-white" onClick={() => setDrawerOpen('addTenant')}>
               <Plus className="h-4 w-4 mr-2" />
               Add New Tenant
             </Button>

@@ -34,7 +34,7 @@ export function ManageDepartments({ onNavigate }: ManageDepartmentsProps) {
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex justify-end">
-            <Button className="bg-[#2563EB] hover:bg-[#0C265E]">
+            <Button className="bg-[#2563EB] text-white hover:bg-[#0C265E]">
               <Plus className="h-4 w-4 mr-2" />
               Add Department
             </Button>

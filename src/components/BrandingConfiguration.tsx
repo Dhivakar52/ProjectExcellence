@@ -57,7 +57,7 @@ export function BrandingConfiguration({ onNavigate }: BrandingConfigurationProps
               rows={3}
             />
           </div>
-          <Button className="bg-[#2563EB] hover:bg-[#0C265E]">Save Branding</Button>
+          <Button className="bg-[#2563EB] text-white hover:bg-[#0C265E]">Save Branding</Button>
         </CardContent>
       </Card>
     </div>

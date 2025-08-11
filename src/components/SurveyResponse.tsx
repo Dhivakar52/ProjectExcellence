@@ -226,13 +226,13 @@ export function SurveyResponse() {
       key: 'response', 
       label: 'Response',
       render: (
-        // value: any,
+        value: any,
          row: any) => (
         <Button 
           variant="ghost" 
           size="sm" 
           className="p-2"
-          onClick={() => handleViewResponse(row)}
+          onClick={() => handleViewResponse(row || value)}
         >
           <Eye className="w-5 h-5" />
         </Button>

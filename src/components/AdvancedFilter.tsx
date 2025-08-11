@@ -10,6 +10,11 @@ import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
 import { CalendarIcon, Filter, RotateCcw, Search } from 'lucide-react';
 import { Badge } from './ui/badge';
 
+import { MultiSelect  } from "react-multi-select-component";
+
+
+
+
 interface FilterField {
   key: string;
   label: string;
@@ -102,6 +107,8 @@ export function AdvancedFilter({
     });
   };
 
+ 
+
   const renderFilterField = (field: FilterField) => {
     switch (field.type) {
       case 'text':
@@ -135,24 +142,14 @@ export function AdvancedFilter({
         );
 
       case 'multiselect':
-        return (
-          <div className="space-y-2 max-h-32 overflow-y-auto border rounded-md p-2">
-            {field.options?.map((option) => (
-              <div key={option} className="flex items-center space-x-2">
-                <Checkbox
-                  id={`${field.key}-${option}`}
-                  checked={(filters[field.key] || []).includes(option)}
-                  onCheckedChange={(checked) => 
-                    handleMultiSelectChange(field.key, option, checked as boolean)
-                  }
-                />
-                <Label htmlFor={`${field.key}-${option}`} className="text-sm">
-                  {option}
-                </Label>
-              </div>
-            ))}
-          </div>
-        );
+  return (
+    <MultiSelect className='my-3'
+      options={field.options?.map(opt => ({ label: opt, value: opt })) || []}
+      value={(filters[field.key] || []).map((opt: string) => ({ label: opt, value: opt }))}
+      onChange={(selected : any) => handleFilterChange(field.key, selected.map((s: any) => s.value))}
+      labelledBy={`Select ${field.label.toLowerCase()}`}
+    />
+  );
 
       case 'date':
         return (
@@ -207,7 +204,7 @@ export function AdvancedFilter({
           )}
         </div>
       </SheetTrigger>
-      <SheetContent side="right" className="w-[400px] sm:w-[540px] flex flex-col">
+      <SheetContent side="right" className="w-[600px] sm:max-w-lg sm:w-[700px] flex flex-col">
         <SheetHeader>
           <SheetTitle className="flex items-center space-x-2">
             <Filter className="w-5 h-5" />
