@@ -188,10 +188,22 @@
     background-color: white !important;
 
   }
-  [role="option"] {
-    background-color: white !important;
+  [role="listbox"],[role="menuitem"]{
+     background-color: white !important;
+       position: relative !important;
+   z-index: 999 !important;
   }
- 
+  [data-slot="select-content"] [data-highlighted] {
+  background-color: #DEEBFF !important;
+  color: white !important;
+}
+
+
+
+
+
+
+
 }
 
 html {

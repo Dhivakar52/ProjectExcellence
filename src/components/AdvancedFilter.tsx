@@ -16,6 +16,8 @@ import ReactSelect from "react-select";
 
 
 
+
+
 interface FilterField {
   key: string;
   label: string;
@@ -32,6 +34,9 @@ interface AdvancedFilterProps {
   children: React.ReactNode;
   showCloseButton?: boolean;
 }
+
+
+
 
 export function AdvancedFilter({ 
   fields, 
@@ -146,7 +151,7 @@ case 'multiselect':
   return (
     <ReactSelect
       isMulti
-      className="my-3"
+      className="my-3 multiselectFilter"
       options={field.options?.map(opt => ({ label: opt, value: opt })) || []}
       value={(filters[field.key] || []).map((opt: string) => ({ label: opt, value: opt }))}
       onChange={(selected: any) =>

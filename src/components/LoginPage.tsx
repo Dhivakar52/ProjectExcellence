@@ -6,6 +6,7 @@ import { Checkbox } from './ui/checkbox';
 import { Eye, EyeOff, Mail, Lock } from 'lucide-react';
 // import whiteLogo from 'figma:asset/a2e6c195f7ae1449346b5ed6bac19070fc5c4fca.png';
 import whiteLogo from '../assets/images/white_logo.png'; // Adjust the path as necessary
+import srm from '../assets/images/srm.png';
 
 interface LoginPageProps {
   onLogin: () => void;
@@ -97,7 +98,8 @@ export function LoginPage({ onLogin, onSwitchToSignup }: LoginPageProps) {
       {/* Right Side - Login Form */}
       <div className="flex-1 bg-white flex items-center justify-center px-12">
         <div className="w-full max-w-md">
-          <div className="text-center mb-8">
+          <div className="text-center flex flex-col justify-center items-center mb-8">
+             <img src={srm} className='w-[50%] mb-2' alt="" />
             <h2 className="text-3xl font-bold text-gray-900 mb-2">Welcome Back!</h2>
             <p className="text-gray-600 text-lg">Sign in to your account</p>
           </div>

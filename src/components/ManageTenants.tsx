@@ -23,7 +23,7 @@ export function ManageTenants({ onNavigate }: ManageTenantsProps) {
 
   const AddTenantDrawer = () => (
     <Sheet open={drawerOpen === 'addTenant'} onOpenChange={(open) => setDrawerOpen(open ? 'addTenant' : null)}>
-      <SheetContent className="w-[400px] sm:w-[540px]">
+      <SheetContent className="w-[600px] sm:max-w-lg sm:w-[700px] p-4">
         <SheetHeader>
           <SheetTitle>Add New Tenant</SheetTitle>
           <SheetDescription>Create a new tenant organization.</SheetDescription>
