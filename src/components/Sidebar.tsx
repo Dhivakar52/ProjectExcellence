@@ -31,6 +31,8 @@ export function Sidebar({ currentPage, onPageChange, onLogout, collapsed = false
     { id: 'settings', label: 'Settings', icon: Settings },
   ];
 
+
+  
   return (
     <div className={`fixed left-0 top-0 h-full bg-white shadow-lg border-r border-gray-200 z-50 transition-all duration-300 ${collapsed ? 'w-16' : 'w-64'}`}>
       {/* Header with Logo */}

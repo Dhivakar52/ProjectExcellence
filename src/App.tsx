@@ -120,6 +120,8 @@ export default function App() {
     }
   };
 
+  console.log(renderPage());
+
   return (
     <div className="min-h-screen bg-gray-50" style={{ fontFamily: 'Roboto, system-ui, -apple-system, sans-serif' }}>
       <div className="flex">

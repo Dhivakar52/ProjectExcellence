@@ -5,7 +5,7 @@ import { Label } from './ui/label';
 import { Checkbox } from './ui/checkbox';
 import { Eye, EyeOff, Mail, Lock } from 'lucide-react';
 // import whiteLogo from 'figma:asset/a2e6c195f7ae1449346b5ed6bac19070fc5c4fca.png';
-import whiteLogo from '../assets/images/srm.png'; // Adjust the path as necessary
+import whiteLogo from '../assets/images/white_logo.png'; // Adjust the path as necessary
 
 interface LoginPageProps {
   onLogin: () => void;
